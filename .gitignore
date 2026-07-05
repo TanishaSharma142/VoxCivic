@@ -1,0 +1,15 @@
+# Virtual Environments (Local python environments)
+venv_voxcivic/
+.venv/
+
+# Python caching (matches all __pycache__ folders globally)
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Data / Databases (Ignore local datasets)
+data/
+
+# Environment variables / Secrets (Just in case you add an .env file later)
+.env
+.env.local

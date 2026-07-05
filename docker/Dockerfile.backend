@@ -1,0 +1,15 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+COPY backend/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY backend/ .
+
+# NVIDIA RAPIDS requires CUDA runtime - for GPU acceleration on Cloud Run with GPUs,
+# use a base image with CUDA (e.g., nvidia/cuda:12.2-runtime-ubuntu22.04) and install RAPIDS.
+# For hackathon MVP without GPU on Cloud Run, cuDF can still be installed but will run on CPU.
+# For Cloud Run with GPU (alpha), you need a custom image.
+# We'll keep it simple; if GPU needed, modify.
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

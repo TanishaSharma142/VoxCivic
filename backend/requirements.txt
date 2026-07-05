@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+google-cloud-bigquery
+google-cloud-storage
+google-generativeai
+google-adk
+python-multipart
+python-dotenv
+pydantic
+pandas
+scikit-learn
