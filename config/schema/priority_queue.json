@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "incident_id": {"type": "string"},
+    "priority_score": {"type": "number"},
+    "severity_component": {"type": "number"},
+    "frequency_component": {"type": "number"},
+    "location_risk_component": {"type": "number"},
+    "justification_text": {"type": "string"},
+    "recommended_department": {"type": "string"},
+    "recommended_action": {"type": "string"},
+    "rank": {"type": "integer", "minimum": 1}
+  },
+  "required": ["incident_id", "priority_score", "severity_component", "frequency_component", "location_risk_component", "justification_text", "recommended_department", "recommended_action", "rank"]
+}

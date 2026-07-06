@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "incident_id": {"type": "string"},
+    "complaint_ids": {"type": "array", "items": {"type": "string"}},
+    "category": {"type": "string"},
+    "cluster_size": {"type": "integer", "minimum": 1},
+    "ward": {"type": "string"},
+    "representative_description": {"type": "string"},
+    "first_reported_at": {"type": "string", "format": "date-time"},
+    "last_reported_at": {"type": "string", "format": "date-time"}
+  },
+  "required": ["incident_id", "complaint_ids", "category", "cluster_size", "ward", "representative_description", "first_reported_at", "last_reported_at"]
+}

@@ -1,0 +1,24 @@
+{
+  "trace": [
+    {
+      "agent": "Orchestrator",
+      "action": "submit_complaint",
+      "details": "Routed to Intake Agent"
+    },
+    {
+      "agent": "ComplaintIntakeAgent",
+      "action": "process_complaint",
+      "details": "Extracted category, severity, ward, embedding"
+    },
+    {
+      "agent": "AnalyticsAgent",
+      "action": "run",
+      "details": "Aggregated complaints, detected anomalies, clustered incidents"
+    },
+    {
+      "agent": "DecisionIntelligenceAgent",
+      "action": "compute_priority_queue",
+      "details": "Scored incidents and generated ranking"
+    }
+  ]
+}

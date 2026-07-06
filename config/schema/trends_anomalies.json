@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "ward": {"type": "string"},
+    "category": {"type": "string"},
+    "period": {"type": "string"},
+    "complaint_count": {"type": "integer", "minimum": 0},
+    "rolling_avg": {"type": "number"},
+    "anomaly_flag": {"type": "boolean"},
+    "anomaly_score": {"type": "number"}
+  },
+  "required": ["ward", "category", "period", "complaint_count", "rolling_avg", "anomaly_flag", "anomaly_score"]
+}

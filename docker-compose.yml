@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - USE_RAPIDS=false
+  frontend:
+    image: streamlit/streamlit:latest
+    working_dir: /app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./:/app
+    environment:
+      - BACKEND_URL=http://backend:8080
